@@ -12,6 +12,9 @@ const CartIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-6 
 const ListViewIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg> );
 const GridViewIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" /></svg> );
 const ChatIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg> );
+const InstagramIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}> <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect> <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path> <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line> </svg> );
+const WhatsAppIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"> <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.3-1.38c1.44.82 3.08 1.25 4.69 1.25h.01c5.46 0 9.91-4.45 9.91-9.91s-4.45-9.91-9.91-9.91zM17.15 15.28c-.22-.11-.76-.38-1.04-.49-.28-.11-.48-.11-.68.11-.2.22-.39.49-.48.59-.09.1-.18.11-.33.06s-.6-.22-1.14-.7c-.43-.37-.71-.84-.8-1-.09-.16 0-.25.09-.34.08-.08.18-.22.27-.33.09-.11.12-.18.18-.3.06-.11 0-.22-.05-.33-.06-.11-.68-1.63-.93-2.23s-.49-.52-.68-.52h-.48c-.2 0-.48.06-.68.33s-.76.74-.76 1.8c0 1.06.78 2.08.88 2.23.11.16 1.54 2.45 3.74 3.3.52.2.92.33 1.24.42.5.13.95.11 1.3.07.39-.04.76-.16.98-.38.28-.27.28-.52.2-.59-.09-.06-.22-.11-.48-.22z"/> </svg> );
+
 
 // --- Tipos de Datos ---
 interface Product { id: number; name: string; category: string; description: string; images: string[]; }
@@ -19,7 +22,7 @@ interface ChatMessage { sender: 'user' | 'bot'; text: string; }
 
 // --- Datos de Muestra ---
 const products: Product[] = [
-    { id: 1, name: 'Cielorraso Icopor Liso', category: 'cielorrasos', description: 'Panel de icopor liso de alta densidad, ideal para acabados modernos.', images: ['https://via.placeholder.com/400x300.png?text=Icopor+Liso+1', 'https://via.placeholder.com/400x300.png?text=Icopor+Liso+2'] },
+    { id: 1, name: 'Cielorraso Icopor Liso', category: 'cielorrasos', description: 'Panel de icopor liso de alta densidad, ideal para acabados modernos.', images: ['https://aluminiosega.com/images/galerias/cielo-rasos/cieloraso1.jpg', 'https://via.placeholder.com/400x300.png?text=Icopor+Liso+2'] },
     { id: 2, name: 'Cielorraso PVC Blanco', category: 'cielorrasos', description: 'Lámina de PVC resistente a la humedad y de fácil limpieza.', images: ['https://via.placeholder.com/400x300.png?text=PVC+Blanco'] },
     { id: 3, name: 'Ventana de Aluminio', category: 'aluminio', description: 'Ventana corrediza con marco de aluminio y vidrio de 4mm.', images: ['https://via.placeholder.com/400x300.png?text=Ventana'] },
     { id: 4, name: 'Puerta de Vidrio Templado', category: 'vidrio', description: 'Puerta batiente de 8mm para oficinas y locales comerciales.', images: ['https://via.placeholder.com/400x300.png?text=Puerta+Vidrio'] },
@@ -36,6 +39,7 @@ const App: React.FC = () => {
     const [viewMode, setViewMode] = useState('grid');
     const [isSplashVisible, setIsSplashVisible] = useState(true);
     const [isChatOpen, setIsChatOpen] = useState(false);
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [chatMessages, setChatMessages] = useState<ChatMessage[]>([
         { sender: 'bot', text: '¡Hola! Soy el asistente virtual de Mundoicopor. ¿Cómo puedo ayudarte hoy?' }
     ]);
@@ -144,7 +148,12 @@ const App: React.FC = () => {
           <div className={viewMode === 'grid' ? "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" : "flex flex-col gap-8"}>
             {filteredProducts.map(product => (
               <div key={product.id} className={`neumorphic-card overflow-hidden ${viewMode === 'list' ? 'flex flex-col sm:flex-row' : ''}`}>
-                <img src={product.images[0]} alt={product.name} className={`${viewMode === 'list' ? 'w-full sm:w-1/3 object-cover' : 'w-full h-48 object-cover'}`}/>
+                <img 
+                    src={product.images[0]} 
+                    alt={product.name} 
+                    className={`${viewMode === 'list' ? 'w-full sm:w-1/3 object-cover' : 'w-full h-48 object-cover'} cursor-pointer transition-transform duration-300 hover:scale-105`}
+                    onClick={() => setSelectedImage(product.images[0])}
+                />
                 <div className="p-6 flex flex-col flex-1">
                     <h3 className="text-xl font-bold text-gray-800">{product.name}</h3>
                     <p className="text-gray-600 mt-2 flex-grow">{product.description}</p>
@@ -180,6 +189,14 @@ const App: React.FC = () => {
           <img src="https://lh3.googleusercontent.com/pw/AP1GczO_avgeyzyvXEExqKVMZQkpr595OS5HvQYE71aM8vXECNuAYBHIiyXIxJdb8tZj2I3fNPIGro4nBM5ktjSHo3-tS40SwPaaBDVgXdsORcr_fu3eVyTccB2uBfShnmjH_re5jj7Tcd6mH-WO-Sc28G8=w64-h64-s-no-gm?authuser=0" alt="Mundoicopor Logo" className="h-16 w-16 rounded-full mx-auto mb-2" />
           <p>&copy; {new Date().getFullYear()} Mundoicopor. Todos los derechos reservados.</p>
           <p className="text-sm">Calidad y Servicio en el Eje Cafetero.</p>
+          <div className="flex justify-center gap-4 mt-4">
+            <a href="https://www.instagram.com/cielo_raso_pvc" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Mundoicopor" className="neumorphic-button p-3 rounded-full text-gray-700 hover:text-pink-600 transition-colors">
+              <InstagramIcon />
+            </a>
+            <a href="https://wa.me/573121234567" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de Mundoicopor" className="neumorphic-button p-3 rounded-full text-gray-700 hover:text-green-600 transition-colors">
+              <WhatsAppIcon />
+            </a>
+          </div>
         </div>
       </footer>
 
@@ -233,6 +250,16 @@ const App: React.FC = () => {
     <button onClick={() => setIsChatOpen(!isChatOpen)} className="chatbot-fab neumorphic-button bg-gradient-to-br from-blue-600 to-green-500 text-white p-4 rounded-full shadow-lg">
         <ChatIcon />
     </button>
+    
+    {/* Image Modal */}
+    {selectedImage && (
+        <div className={`image-modal-overlay ${selectedImage ? 'open' : ''}`} onClick={() => setSelectedImage(null)}>
+            <div className="image-modal" onClick={(e) => e.stopPropagation()}>
+                <img src={selectedImage} alt="Vista ampliada del producto" className="max-w-[90vw] max-h-[85vh] rounded-lg shadow-2xl object-contain" />
+                <button onClick={() => setSelectedImage(null)} className="absolute -top-4 -right-4 text-white bg-gray-800/50 rounded-full h-10 w-10 flex items-center justify-center text-2xl font-bold">&times;</button>
+            </div>
+        </div>
+    )}
     </div>
   );
 };
