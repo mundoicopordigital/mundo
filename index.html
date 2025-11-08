@@ -1,22 +1,180 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React App</title>
+    <title>Mundoicopor - Cielorrasos y Remodelaciones en Pereira</title>
     <script src="https://cdn.tailwindcss.com"></script>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
-  }
-}
-</script>
-</head>
+    <style>
+      :root {
+        --bg-color: #e0e0e0;
+        --neumorphic-shadow-light: rgba(255, 255, 255, 0.7);
+        --neumorphic-shadow-dark: rgba(163, 177, 198, 0.6);
+        --glass-bg-color: rgba(255, 255, 255, 0.5);
+        --glass-border-color: rgba(255, 255, 255, 0.4);
+        --brand-blue: #2563eb;
+        --brand-green: #10b981;
+      }
+
+      @keyframes sheen {
+        0% { transform: translateX(-100%) skewX(-20deg); }
+        100% { transform: translateX(200%) skewX(-20deg); }
+      }
+      
+      @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; pointer-events: none; }
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      body {
+        background-color: var(--bg-color);
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuOCIgbnVtT2N0YXZlcz0iMyIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDMiLz48L3N2Zz4=');
+        scroll-behavior: smooth;
+      }
+
+      .neumorphic-card {
+        background: var(--bg-color);
+        border-radius: 20px;
+        box-shadow: 8px 8px 16px var(--neumorphic-shadow-dark), -8px -8px 16px var(--neumorphic-shadow-light);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .neumorphic-card-inset {
+        background: var(--bg-color);
+        border-radius: 20px;
+        box-shadow: inset 6px 6px 12px var(--neumorphic-shadow-dark), inset -6px -6px 12px var(--neumorphic-shadow-light);
+      }
+      
+      .neumorphic-button:active, .neumorphic-button.active {
+        box-shadow: inset 4px 4px 8px var(--neumorphic-shadow-dark), inset -4px -4px 8px var(--neumorphic-shadow-light);
+      }
+
+      .glassmorphic {
+        position: relative;
+        background: var(--glass-bg-color);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-radius: 16px;
+        border: 1px solid var(--glass-border-color);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .glassmorphic::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+        animation: sheen 4s infinite linear;
+        opacity: 0.8;
+      }
+
+      /* Estilos para el Carrito Modal */
+      .cart-modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        z-index: 40;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        pointer-events: none;
+      }
+      .cart-modal-overlay.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .cart-modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.95);
+        z-index: 50;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        pointer-events: none;
+      }
+      .cart-modal.open {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      /* Estilos para el Splash Screen */
+      .splash-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--bg-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+        animation: fadeIn 0.5s ease-in-out;
+      }
+      .splash-screen.hidden {
+        animation: fadeOut 0.8s ease-in-out forwards;
+      }
+      .splash-logo {
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      /* Estilos para el Chatbot */
+      .chatbot-fab {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 30;
+        transition: transform 0.3s ease-in-out;
+      }
+      .chatbot-fab:hover {
+        transform: scale(1.1);
+      }
+      .chatbot-window {
+        position: fixed;
+        bottom: 6.5rem;
+        right: 2rem;
+        width: 90%;
+        max-width: 380px;
+        height: 500px;
+        z-index: 30;
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+        transition: all 0.3s ease-in-out;
+        pointer-events: none;
+        display: flex;
+        flex-direction: column;
+      }
+      .chatbot-window.open {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        pointer-events: auto;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "react/": "https://aistudiocdn.com/react@^19.2.0/",
+          "react": "https://aistudiocdn.com/react@^19.2.0",
+          "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+        }
+      }
+    </script>
+  </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
