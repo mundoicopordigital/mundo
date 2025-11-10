@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/pw/AP1GczO2xbFnHWenHS0R5JJih1sCqz-4V2qQPqDCOyAf-80E63H817eWs94woV1q1ah0gFDNjs3G0aUIJElSH2URp2wGP4Qb9opR8tELd2Q03vdFegrpcheOipDQ2X5MejcXG46nCPe8IdOzAh6FvLWGyDg=w991-h991-s-no-gm?authuser=0" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mundoicopor - Cielorrasos y Remodelaciones en Pereira</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -15,6 +15,7 @@
         --glass-border-color: rgba(255, 255, 255, 0.4);
         --brand-blue: #2563eb;
         --brand-green: #10b981;
+        --logo-url: url('https://lh3.googleusercontent.com/pw/AP1GczO2xbFnHWenHS0R5JJih1sCqz-4V2qQPqDCOyAf-80E63H817eWs94woV1q1ah0gFDNjs3G0aUIJElSH2URp2wGP4Qb9opR8tELd2Q03vdFegrpcheOipDQ2X5MejcXG46nCPe8IdOzAh6FvLWGyDg=w991-h991-s-no-gm?authuser=0');
       }
 
       @keyframes sheen {
@@ -30,6 +31,16 @@
       @keyframes fadeIn {
         from { opacity: 0; }
         to { opacity: 1; }
+      }
+
+      @keyframes cart-bounce {
+        0%, 100% { transform: translateY(0) scale(1); }
+        50% { transform: translateY(-8px) scale(1.1); }
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.7; }
       }
 
       body {
@@ -78,7 +89,7 @@
         opacity: 0.8;
       }
 
-      /* Estilos para el Carrito Modal */
+      /* Estilos para Modales */
       .cart-modal-overlay {
         position: fixed;
         top: 0;
@@ -87,7 +98,7 @@
         bottom: 0;
         background-color: rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(5px);
-        z-index: 40;
+        z-index: 50;
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
         pointer-events: none;
@@ -101,7 +112,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) scale(0.95);
-        z-index: 50;
+        z-index: 60;
         opacity: 0;
         transition: all 0.3s ease-in-out;
         pointer-events: none;
@@ -132,12 +143,17 @@
       .splash-logo {
         animation: fadeIn 1s ease-in-out;
       }
+      
+      /* Animación del carrito */
+      .cart-bounce {
+        animation: cart-bounce 0.6s ease;
+      }
 
       /* Estilos para el Chatbot */
       .chatbot-fab {
         position: fixed;
-        bottom: 2rem;
-        right: 2rem;
+        bottom: 1rem;
+        right: 1rem;
         z-index: 30;
         transition: transform 0.3s ease-in-out;
       }
@@ -146,11 +162,12 @@
       }
       .chatbot-window {
         position: fixed;
-        bottom: 6.5rem;
-        right: 2rem;
-        width: 90%;
-        max-width: 380px;
-        height: 500px;
+        bottom: 5rem;
+        right: 0.75rem;
+        width: calc(100% - 1.5rem);
+        max-width: 360px;
+        height: 70vh;
+        max-height: 500px;
         z-index: 30;
         opacity: 0;
         transform: translateY(20px) scale(0.95);
@@ -164,37 +181,56 @@
         transform: translateY(0) scale(1);
         pointer-events: auto;
       }
+      .mic-recording {
+        color: #ef4444; /* red-500 */
+        animation: pulse 1.5s infinite;
+      }
 
-      /* Estilos para el Image Modal */
-      .image-modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(8px);
-        z-index: 60;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-        pointer-events: none;
+      @media (min-width: 640px) {
+        .chatbot-fab {
+            bottom: 2rem;
+            right: 2rem;
+        }
+        .chatbot-window {
+            bottom: 6.5rem;
+            right: 2rem;
+            height: 500px;
+        }
       }
-      .image-modal-overlay.open {
-        opacity: 1;
-        pointer-events: auto;
-      }
-      .image-modal {
+
+      /* Estilos para Marca de Agua */
+      .watermarked {
         position: relative;
-        transform: scale(0.95);
-        opacity: 0;
-        transition: all 0.3s ease-in-out;
+        display: inline-block;
+        line-height: 0;
+        overflow: hidden; /* Asegura que la marca no se salga de bordes redondeados */
       }
-      .image-modal-overlay.open .image-modal {
-        transform: scale(1);
-        opacity: 1;
+      .watermarked::after {
+        content: '';
+        position: absolute;
+        background-image: var(--logo-url);
+        background-size: contain;
+        background-repeat: no-repeat;
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0.5;
+        bottom: 8px;
+        right: 8px;
+        width: 45px;
+        height: 45px;
+      }
+      .watermarked-sm::after {
+        width: 30px;
+        height: 30px;
+        bottom: 5px;
+        right: 5px;
+      }
+      .watermarked-lg::after {
+        width: 80px;
+        height: 80px;
+        bottom: 20px;
+        right: 20px;
+        opacity: 0.3;
       }
     </style>
     <script type="importmap">
