@@ -1,3 +1,4 @@
+
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 
 // FIX: Add type definitions for SpeechRecognition API to fix TypeScript errors.
@@ -85,8 +86,8 @@ const recentActivities = [
 ];
 const showcaseVideos = [
   { id: '2JMNIE9LdqE', title: 'Instalación Cielorraso Icopor', thumbnail: 'https://i.ytimg.com/vi/2JMNIE9LdqE/mqdefault.jpg' },
-  { id: 'x-W3aY-4Zc0', title: 'Decoración con PVC', thumbnail: 'https://i.ytimg.com/vi/x-W3aY-4Zc0/mqdefault.jpg' },
-  { id: '9bZkp7q19f0', title: 'Innovación y Diseño', thumbnail: 'https://i.ytimg.com/vi/9bZkp7q19f0/mqdefault.jpg' }
+  { id: '2PUrO9R9x90', title: 'Decoración con PVC', thumbnail: 'https://i.ytimg.com/vi/2PUrO9R9x90/mqdefault.jpg' },
+  { id: 'iQ3AxEoCDwU', title: 'Innovación y Diseño', thumbnail: 'https://i.ytimg.com/vi/iQ3AxEoCDwU/mqdefault.jpg' }
 ];
 
 const navLinks = [
@@ -694,7 +695,7 @@ const App: React.FC = () => {
             <div className="neumorphic-card overflow-hidden p-2 sm:p-4">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.68303867057!2d-75.67788158866185!3d4.831916940348701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e388160e10d2937%3A0xb690a6e605d8f28c!2sMundo%20Icopor%20y%20Drywall!5e0!3m2!1ses!2sco!4v1722031175659!5m2!1ses!2sco"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.68303977543!2d-75.6778816239567!3d4.831916940348579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e388160e10d2937%3A0x34db6048cc952fbc!2sCielo%20rasos%20Mundo%20Icopor!5e0!3m2!1ses!2sco!4v1722378931169!5m2!1ses!2sco"
                         width="100%"
                         height="350"
                         style={{ border: 0, borderRadius: '12px' }}
