@@ -487,8 +487,8 @@ const App: React.FC = () => {
                 <div className="aspect-video w-full rounded-lg overflow-hidden">
                     <iframe 
                         className="w-full h-full"
-                        src="https://www.youtube.com/embed/2PUrO9R9x90?si=h6DbaMiUJN2scwLy&autoplay=1&playlist=iQ3AxEoCDwU&loop=1&rel=0" 
-                        title="Proyectos Mundoicopor" 
+                        src="https://www.youtube.com/embed/2PUrO9R9x90?si=e-DcfhLGlr--_vEH&autoplay=1&rel=0" 
+                        title="YouTube video player" 
                         frameBorder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                         allowFullScreen>
