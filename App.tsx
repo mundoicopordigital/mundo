@@ -1,5 +1,4 @@
 
-
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 
 // --- Iconos SVG ---
@@ -17,9 +16,7 @@ const InstagramIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className=
 const WhatsAppIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"> <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.3-1.38c1.44.82 3.08 1.25 4.69 1.25h.01c5.46 0 9.91-4.45 9.91-9.91s-4.45-9.91-9.91-9.91zM17.15 15.28c-.22-.11-.76-.38-1.04-.49-.28-.11-.48-.11-.68.11-.2.22-.39.49-.48.59-.09.1-.18.11-.33.06s-.6-.22-1.14-.7c-.43-.37-.71-.84-.8-1-.09-.16 0-.25.09-.34.08-.08.18-.22.27-.33.09-.11.12-.18.18-.3.06-.11 0-.22-.05-.33-.06-.11-.68-1.63-.93-2.23s-.49-.52-.68-.52h-.48c-.2 0-.48.06-.68.33s-.76.74-.76 1.8c0 1.06.78 2.08.88 2.23.11.16 1.54 2.45 3.74 3.3.52.2.92.33 1.24.42.5.13.95.11 1.3.07.39-.04.76-.16.98-.38.28-.27.28-.52.2-.59-.09-.06-.22-.11-.48-.22z"/> </svg> );
 const ChevronLeftIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg> );
 const ChevronRightIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg> );
-// Fix: Update ChevronDownIcon to accept a className prop to allow for dynamic styling like rotation.
 const ChevronDownIcon: React.FC<{ className?: string }> = ({ className }) => ( <svg xmlns="http://www.w3.org/2000/svg" className={`h-6 w-6 transition-transform duration-300 ${className || ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg> );
-// Fix: Use React.FC to correctly type the component and allow for the `key` prop.
 const StarIcon: React.FC<{ filled: boolean }> = ({ filled }) => ( <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 ${filled ? 'text-yellow-400' : 'text-gray-300'}`} viewBox="0 0 20 20" fill="currentColor"> <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /> </svg> );
 
 
@@ -54,7 +51,7 @@ const testimonials: Testimonial[] = [
 ];
 
 const faqData: FAQItem[] = [
-    { question: '¿En qué ciudades prestan servicio?', answer: 'Nuestra sede principal está en Pereira, pero ofrecemos nuestros servicios en todo el Eje Cafetero y áreas aledañas. Contáctanos para confirmar la cobertura en tu ubicación específica.' },
+    { question: '¿En qué ciudades prestan servicio?', answer: 'Nuestra sede principal está en Dosquebradas, pero ofrecemos nuestros servicios en todo el Eje Cafetero y áreas aledañas. Contáctanos para confirmar la cobertura en tu ubicación específica.' },
     { question: '¿Cómo puedo solicitar una cotización?', answer: 'Es muy fácil. Puedes navegar por nuestra tienda, añadir los productos o servicios que te interesan al carrito de cotización y enviarnos tus datos. También puedes usar el formulario de cotización directa al final de la página. En ambos casos, un asesor te contactará por WhatsApp a la brevedad.' },
     { question: '¿Cuánto tiempo tarda la instalación?', answer: 'El tiempo de instalación varía según el tamaño y la complejidad del proyecto. Por ejemplo, un cielorraso para una habitación estándar puede tomar de 1 a 2 días. Al momento de cotizar, te daremos un cronograma estimado y detallado.' },
     { question: '¿Qué métodos de pago aceptan?', answer: 'Aceptamos transferencias bancarias (Bancolombia), Nequi, Daviplata y efectivo. Generalmente, trabajamos con un anticipo del 50% para iniciar y el 50% restante al finalizar el trabajo a satisfacción.' },
@@ -85,7 +82,6 @@ const StarRating = ({ rating }: { rating: number }) => (
     </div>
 );
 
-// Fix: Use React.FC to correctly type the component and allow for the `key` prop.
 const AccordionItem: React.FC<{ item: FAQItem, isOpen: boolean, onClick: () => void }> = ({ item, isOpen, onClick }) => (
     <div className="neumorphic-card-inset rounded-lg overflow-hidden">
         <button onClick={onClick} className="w-full flex justify-between items-center p-4 text-left font-semibold">
@@ -141,7 +137,7 @@ const App: React.FC = () => {
     };
     
     const sendWhatsAppMessage = (message: string) => {
-        const phoneNumber = '573121234567'; // Tu número de WhatsApp
+        const phoneNumber = '573117379402'; // Número de WhatsApp actualizado
         const encodedMessage = encodeURIComponent(message);
         const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
         window.open(url, '_blank');
@@ -179,7 +175,7 @@ const App: React.FC = () => {
             let botResponse = "No estoy seguro de cómo responder a eso. ¿Puedes intentar con otra opción?";
             if (userQuery === 'quote') botResponse = "¡Claro! Para cotizar, simplemente busca los productos que te interesan en nuestra tienda, añádelos al carrito y completa tus datos. ¡Tu solicitud nos llegará por WhatsApp!";
             else if (userQuery === 'info') botResponse = "Tenemos cielorrasos en icopor y PVC, perfilería, y todo en aluminio arquitectónico y vidrio templado.";
-            else if (userQuery === 'contact') botResponse = "Puedes comunicarte con un asesor experto llamando al 312 123 4567 o visitándonos en Pereira. ¡Será un placer atenderte!";
+            else if (userQuery === 'contact') botResponse = "Puedes comunicarte con un asesor experto llamando al 311 737 9402 o visitándonos en Dosquebradas. ¡Será un placer atenderte!";
             setChatMessages(prev => [...prev, { sender: 'bot', text: botResponse }]);
         }, 1000);
     };
@@ -276,7 +272,7 @@ const App: React.FC = () => {
         <div className="container mx-auto px-6 space-y-16">
             <div className="text-center">
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">Conoce a Mundoicopor</h2>
-                <p className="max-w-3xl mx-auto text-lg text-gray-600">Con más de 20 años de experiencia, somos líderes en la venta, distribución e instalación de cielorrasos y servicios de remodelación, comprometidos con la calidad y la satisfacción del cliente en todo el Eje Cafetero.</p>
+                <p className="max-w-3xl mx-auto text-lg text-gray-600">En Mundoicopor somos más que una empresa; somos artesanos de los espacios con una experiencia que supera las dos décadas en el corazón del Eje Cafetero. Nuestra esencia radica en la transformación y la innovación. Nacimos como especialistas en la fabricación de cielorrasos en icopor y PVC, y nos hemos consolidado como líderes en soluciones arquitectónicas integrales, abarcando desde elegantes estructuras en aluminio hasta la instalación de vidrio templado a la medida y pasamanos de lujo. Lo que nos define es nuestra promesa de CALIDAD Y SERVICIO. Contamos con un equipo de mano de obra altamente calificada, reconocido por nuestro gran cumplimiento, responsabilidad y atención al detalle.</p>
             </div>
             <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div className="neumorphic-card p-8 text-center flex flex-col items-center"> <MissionIcon /> <h3 className="text-2xl font-bold mb-3">Nuestra Misión</h3> <p>Ofrecer soluciones integrales y de alta calidad en cielorrasos y remodelaciones, superando las expectativas de nuestros clientes a través de la innovación, un servicio excepcional y el trabajo de personal altamente calificado.</p> </div>
@@ -349,7 +345,7 @@ const App: React.FC = () => {
             <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Visítanos</h2>
             <div className="neumorphic-card overflow-hidden">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.994269165383!2d-75.72658102588147!3d4.599182542457852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38657685608799%3A0x34db6048cc952fbc!2sCielo%20rasos%20Mundo%20Icopor!5e0!3m2!1ses-419!2sco!4v1720562650742!5m2!1ses-419!2sco"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.69806981882!2d-75.6666986250284!3d4.821109940428612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e388160e10d2937%3A0xb690a6e605d8f28c!2sMundo%20Icopor%20y%20Drywall!5e0!3m2!1ses!2sco!4v1721768817757!5m2!1ses!2sco"
                     width="100%" height="450" style={{ border: 0 }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"
                     title="Mapa de ubicación de Cielo rasos Mundo Icopor"
                 ></iframe>
@@ -367,8 +363,8 @@ const App: React.FC = () => {
               <a href="#preguntas-frecuentes" className="hover:underline">Preguntas Frecuentes</a>
           </div>
           <div className="flex justify-center gap-4">
-            <a href="https://www.instagram.com/cielo_raso_pvc" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Mundoicopor" className="neumorphic-button p-3 rounded-full text-gray-700 hover:text-pink-600 transition-colors"> <InstagramIcon /> </a>
-            <a href="https://wa.me/573121234567" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de Mundoicopor" className="neumorphic-button p-3 rounded-full text-gray-700 hover:text-green-600 transition-colors"> <WhatsAppIcon /> </a>
+            <a href="https://www.instagram.com/cuelo_raso_pvc" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Mundoicopor" className="neumorphic-button p-3 rounded-full text-gray-700 hover:text-pink-600 transition-colors"> <InstagramIcon /> </a>
+            <a href="https://wa.me/573117379402" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp de Mundoicopor" className="neumorphic-button p-3 rounded-full text-gray-700 hover:text-green-600 transition-colors"> <WhatsAppIcon /> </a>
           </div>
         </div>
       </footer>
