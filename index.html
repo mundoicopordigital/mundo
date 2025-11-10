@@ -42,6 +42,11 @@
         0%, 100% { opacity: 1; }
         50% { opacity: 0.7; }
       }
+      
+      @keyframes scroll-left {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
 
       body {
         background-color: var(--bg-color);
@@ -96,8 +101,8 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(8px);
         z-index: 50;
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
@@ -186,7 +191,35 @@
         animation: pulse 1.5s infinite;
       }
 
-      @media (min-width: 640px) {
+      /* Estilos para Visitantes en Tiempo Real y Notificaciones */
+      .live-visitors {
+        position: fixed;
+        bottom: 1rem;
+        left: 1rem;
+        z-index: 30;
+        transition: transform 0.3s ease-in-out;
+      }
+      .live-visitors:hover {
+        transform: scale(1.05);
+      }
+      .activity-notification {
+        position: fixed;
+        bottom: 5rem;
+        left: 1rem;
+        z-index: 30;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s ease-in-out;
+        pointer-events: none;
+        max-width: calc(100% - 2rem);
+      }
+      .activity-notification.visible {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      @media (min-width: 1024px) {
         .chatbot-fab {
             bottom: 2rem;
             right: 2rem;
@@ -195,6 +228,15 @@
             bottom: 6.5rem;
             right: 2rem;
             height: 500px;
+        }
+        .live-visitors {
+            bottom: 2rem;
+            left: 2rem;
+        }
+        .activity-notification {
+            bottom: 6.5rem;
+            left: 2rem;
+            max-width: 350px;
         }
       }
 
@@ -231,6 +273,30 @@
         bottom: 20px;
         right: 20px;
         opacity: 0.3;
+      }
+
+      /* Estilos para Galería Infinita */
+      .infinite-scroll-wrapper {
+        -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+        mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+      }
+      .infinite-scroll-container {
+        display: flex;
+        width: fit-content;
+        animation: scroll-left 60s linear infinite;
+      }
+      .infinite-scroll-wrapper:hover .infinite-scroll-container {
+        animation-play-state: paused;
+      }
+      .icopor-design-item {
+        transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+        cursor: pointer;
+      }
+      .icopor-design-item:hover,
+      .icopor-design-item.scaled {
+        transform: scale(1.1) translateY(-8px);
+        z-index: 10;
+        filter: drop-shadow(0 12px 20px rgba(0,0,0,0.25));
       }
     </style>
     <script type="importmap">
