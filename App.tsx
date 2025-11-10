@@ -72,7 +72,7 @@ const slides = [ { url: 'https://lh3.googleusercontent.com/pw/AP1GczNA6X3-UATHwP
 ];
 const icoporDesigns = [ 'https://lh3.googleusercontent.com/pw/AP1GczMGv-f0jhQP3KU-vfYhYr-rBZbTNrI536HMgsdg6Q15MkRzvDDfMTOLZy28DGLw8_slcP4Ahtz_iArOz9X5YnpMSz2QCO3A37Cx-z6K2XqNG0J7XF8tmAnoohnawUeeWZRpv9ORUp6BfKvnqXR3WEY=w271-h991-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczNu_vANRAEBs8g-o7Cf_ei-60gWY0xY9tvNxpYNpa8wzGscwZDYlAP30UoFF1Obthl7cCYLcR9M8Lne5fZtcvoV_OqUoDtTTdmMAnU7tv7phpaIzT71CxO30zb9-FJqZyxWG_CsHh5NVN0dzhyYJ4U=w273-h991-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczOD-d2udQUKu8HvuwlNvJ46NEmR92JIV1g-NnONS707-3mygQ-PELnOikMvDoXTjMWv7FBRZ3sKwxUKc8V3-IE-rBa7fXJccSZjMwxVumWsnjht9Hc7NlNI4gsccMa1evmGxcVcNASzvylA-XqAC3o=w275-h991-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczP-50-tydm1pREE8g2o6lf_Hel6h5J0t-Szu-8WvYYWt-mafT7usaTeyuYcNSioquEqKdy4SResTKwKYSzpNBCkd4kCTTenl2RgDK6qsIMmUB3Qokij-nPFIhFKD-oGemQaE759Sl3L75e7mhWgZ5k=w277-h991-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczOstEPzbBTYdM2m8j_ull49o5pwFzpsyXGGQtm5PikXg6oFDEjJZYOlabbUm12v5lB6E0ygiX6wk-qPewtJRn74Ii2wcLhY8KFopqB2tXfBO6dNScL3lMjRfu4CYf8EcNFF4nhPjPAO0hYkaaexKR4=w362-h991-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczNhtOPef7s1jGJ533x6qV4llEeeVkRVNGogg7fEcms37k34ZYo7EEpZTkKCGGZ7b7OgT604ek7aI9gVeA7VNJQkZLJXDWW4ntMhTQVpL33LdJnGYS_8iddwPJVtcZdOoBgfagVVHS2oPudtf8uXn-c=w277-h991-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczP1Mgj4HS0suDNCk9iN49sIl-m4IV2l_6ldqRcYbBGN112fw2WY4ctV8nkKy_RSK9gOlQ1aQigC_H61cnl3HR-MLPv1tZzy-ep0EZjcshoalJcTT4MsAewX2LryNqqteRMnh8oFgtSrxPrtsGq-b7Y=w240-h991-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczPMfYBiOKERu1Q92F_TIs3aj-66nOo18v3D9BZTqIqW-7oKxHnt1s3dpiOHxYrZ-8EC1rPqEuwj2Weedkfu_UqVrVFEGt87-pXtzWDRl2fpYsCDxJ7khhHoAJya81lS6_LMEPd93DFneCA0Q6c5DhI=w239-h991-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczM7oHwrjgrZl9EFYas996uSrCRh78P3BBdSc33-HeIORlt5CFofiVRTpusbi1EBNRMl27l8TQnGouU_cEbKu_VUtF44KVUaFrJ88xRf536lE4Q_pXSL36ycLfUa64dwOb1vmA3SATcuos4lPdn0MUw=w274-h991-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczNSENnab2F7qLwoqOufHTV1p4beu26HDOQoLFzkJA0ynPLbHvMdogAqdt8u831Sox93VaD6kqOCMAToNi6ksTJIT8Yl3u5jyQ9noF407ZLJuNNZJUDPPk_VPvvF_VyFLE7GyogFeb_jvGpaGFXhDho=w416-h991-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczMWFOzYVXTPj-aHSyZkEgQpqRuSkdFTWPj9kz2X4QMM5yMogxP0wftl835pQPyWE3ICax8qXiRuXE_tCwJKl7n8mPeZbCZw9XrH1NzGY5LGT5odgwfjJqRfFbwaGSBPET7T7FlzeKDpEdrDef_DCEU=w682-h664-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczORl5KReYJzcXJdWt-ty9hfiKVQQvglbe-CwAHRvjjFobvfMohGPbVuWLrnnYDvLSWw-eIW_YdPtSUw2uGtgdj25llLUloUX3B8moOGL6--Kn4mJ-JqtMiYlodpSc7-A-X_aQg1GI80qJ1kZSQWwuQ=w493-h645-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczMM0BmLX5ekS1oJNH069D6i0BQwCBHVDMKcr-B99V8m9CHLS_dtX0j9Czs508hwv0d3Cd5v8rHAYcdVXI422XtmaO1fEQurHRVeQCM2URhWv8Dm1ufoymtnN5YRZqFAFiyyjBdqBt6L8mKOz1U2vxp6=w417-h461-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczP1pJuqDpcmMXbG_3tv_dijPsQtr18VsI2urhouWmcEqGWTvTRwiYxJao0xLMvjsSOWd6tpaX5YVCHilQTkUrPFZNxRy1M-T1yupoPxtKkqyi88-JgHAegKct-0FTs22iZyWg9dasY-5usXwM70GIBE=w424-h487-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczMPwn3DQ9Kt2VEsNLToObrnxgUCboM1le6SFju4zrpCWBnUnhl0wkpLd9df1b9Dx0qjqIHDNIwJsNC-fa40yLGiZkzkFcjVxgsRaC5FbpWUaZVIgeL-bpNjz2TD0veKorL-1011OwW0FdCFqsgcRZ3U=w446-h480-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczPh9aTD2wF1Dx328VSHtRELK8jNzH-1yehPqjHrH3y8yqWZc_sB9dX5uB1qbaMcOmcQENHRVE-O60qVe_2WWEHysuqAfWC2kiTI5I-gwbEowI3v7mGD6l0sp1hRSx5mog4UjSxzRkbr9TjuIK-N9MDg=w421-h475-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczOtFLwfNbQ8OuqvE1_A2obmdf2M-ha7FS2LRue9nldpvWJAADrBlRsD2hvM-kLd9okQAL7fwoaosfeXMYcWY8kv8lgS3547EoQOqkAYrGCUbvqChsW_uWC356dDSMotsRyfmtOcSO2jsqgPL1y_ru3J=w410-h464-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczP8lmr8JjGLl3uLzizZYkaTeUzMREjuKxUxKmEg1bDErAWzKdnkSlzOYosC00wghIGgFdWs41UBkZkoxkZwg0uJz73Hp-2Zg1Nz0OW-vYf_Bl1AC-Cw4S1IUt3PWk-Qgofh1qvaTbIeD9-em-bG7U89=w418-h472-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczPE9CII778GRYzsPf_npSr_-o5SG1eRet4aqvB9BEOM45pHCuKWxl1wsDVUf8qZKpPHC5LNC-vxU_qCDnciKOrgkkPVAkwgTYa_2Nez18OKIQRwl3TiTQMgTQwqcnrzTSF1hYDC7y6g-ml7UN0qV5CM=w410-h462-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczOKyctDpxOz-AbWk7l_wjDDCvUcb2wMUMwl53Tdyo20Y04g82y-yplRWt0X5TVtSQiJIU6Y7EaDPqnMac8ABx2f28EdNaUQZUydXkvYiVhf3i3W8kAlB61FymxLhnA5xicFZH2-z_B_V64jD7bRIlS6=w800-h800-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczNvX0Dmgq-jDBXjNA7O5ovTcqpQbJM-mjJzGQ-71qjmDZq2WhaYpl7aKcRulF27sdPCMdp2ARMWlrjsbJjQnxiCnTCqJBoPAACDSy1xszXxe3oip1pSuNA2jxJo--Pi9AOXN9CisL_gG2xikb5bNVu2=w424-h487-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczO82Mw2qE1MZ17SDhg7bSRdPERXg8lAXHm2AY_eZvKF_3CAJVKnJzZ4Ak-yitMLEYLtvVpLcdegm2GgqziPsaT5GsqG_95_x6G1blvQPEuPkZYuxxTIxI1qXjuTbImLu89UdC-q30W74TxE0bLmnxfR=w437-h489-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczOMiN9jmoYDrF8_65RrAByiYjKh8ZY2si6OseiJrCdSRY7coRoMaZ6fTr0UEW56P6pWYzwdgXghKRXEBrgocxZhcDG0w4e8vphC_DYGEBz9njy5jweFtTZvdbICNc-zHGBGqoVhv6EyyZCmNRXJkucY=w768-h512-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczMup_iId_1TAfiChuBOuwFRvbxh8qeJJjaXzg30pbK7ox_zx3C0cbTkfX_8Kn_vIHRJ9FQ6-b8ZLpARf9DxlF7nXRcXoEjjdQooyq7ImA7ZBOt_Jz3yDVViW-vdQzLT_WELvZgxlAZPcTJzmL6zZs81=w768-h650-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczOn-D5I65phK4s4lnM79WXDxK5p1DeBtpHJZO0d5YJ2IuDmuv011_2O9GzyXMW8r-ImNkZkMvMQEPot0JYWjh59aKswu_IlXNAjwroBXTDVjtTp5V55aQBsgrcp2wgJHVtR--ewHPR_7y1zvj6kziSD=w600-h600-s-no-gm?authuser=0', 'https://lh3.googleusercontent.com/pw/AP1GczOTGRO69VvYMBFv_HhJg5eZjaX1mlDYGFIoitEgW2Ziwi9tIXXhLW5ffBJMpD8RbGSm1cVuj5VQOzzogmz8ffW4AQ8xAylBf7aKRisg5tqtcWsCDgWE9kxxm1r-uAIRJeJQ6AzFrO-XyF2BkFLDiVNy=w300-h300-s-no-gm?authuser=0',
 ];
-const initialChatMessages: ChatMessage[] = [ { sender: 'bot', type: 'options', content: { text: '¡Hola! Soy OvidioBot, tu asistente virtual de Mundoicopor. ¿Cómo puedo ayudarte hoy?', options: [ { label: 'Ver Cielorrasos', query: 'show-ceilings' }, { label: 'Cotizar un proyecto', query: 'quote' }, { label: 'Ver Ubicación', query: 'location' }, { label: 'Nuestro Instagram', query: 'instagram' }, { label: 'Dejar una Reseña', query: 'review' }, { label: 'Hablar con un asesor', query: 'contact' }, ] } }
+const initialChatMessages: ChatMessage[] = [ { sender: 'bot', type: 'options', content: { text: '¡Hola! Soy OvidioBot, tu asistente virtual de Mundoicopor. ¿Cómo puedo ayudarte hoy?', options: [ { label: 'Ver Cielorrasos', query: 'show-ceilings' }, { label: 'Ver Catálogo Completo', query: 'show-all-products' }, { label: 'Cotizar un proyecto', query: 'quote' }, { label: 'Ver Ubicación', query: 'location' }, { label: 'Nuestro Instagram', query: 'instagram' }, { label: 'Dejar una Reseña', query: 'review' }, { label: 'Hablar con un asesor', query: 'contact' }, ] } }
 ];
 const recentActivities = [
   { icon: '🛒', text: 'Alguien de Pereira acaba de cotizar un Cielorraso en PVC.' },
@@ -83,12 +83,18 @@ const recentActivities = [
   { icon: '🛒', text: 'Juan P. acaba de solicitar una cotización para Divisiones de Baño.' },
   { icon: '👀', text: 'Un arquitecto de Santa Rosa de Cabal está viendo Ventanería en Aluminio.' }
 ];
+const showcaseVideos = [
+  { id: '2JMNIE9LdqE', title: 'Instalación Cielorraso Icopor', thumbnail: 'https://i.ytimg.com/vi/2JMNIE9LdqE/mqdefault.jpg' },
+  { id: 'x-W3aY-4Zc0', title: 'Decoración con PVC', thumbnail: 'https://i.ytimg.com/vi/x-W3aY-4Zc0/mqdefault.jpg' },
+  { id: '9bZkp7q19f0', title: 'Innovación y Diseño', thumbnail: 'https://i.ytimg.com/vi/9bZkp7q19f0/mqdefault.jpg' }
+];
 
 const navLinks = [
     { name: 'Diseños', href: '#icopor-gallery' },
     { name: 'Tienda', href: '#tienda' },
     { name: 'Nosotros', href: '#about' },
     { name: 'Testimonios', href: '#testimonios' },
+    { name: 'Videos', href: '#videos' },
     { name: 'Contacto', href: '#cotizacion' },
 ];
 
@@ -263,6 +269,7 @@ const App: React.FC = () => {
     const [icoporModalIndex, setIcoporModalIndex] = useState<number | null>(null);
     const [showHeader, setShowHeader] = useState(true);
     const lastScrollY = useRef(0);
+    const [isHeaderVideoOpen, setIsHeaderVideoOpen] = useState(false);
 
     useEffect(() => { const timer = setTimeout(() => setIsSplashVisible(false), 2500); return () => clearTimeout(timer); }, []);
     useEffect(() => { chatEndRef.current?.scrollIntoView({ behavior: 'smooth' }); }, [chatMessages]);
@@ -374,6 +381,16 @@ const App: React.FC = () => {
                 const icoporProduct = products.find(p => p.id === 1); const pvcProduct = products.find(p => p.id === 2);
                 if (icoporProduct) setChatMessages(prev => [...prev, { sender: 'bot', type: 'product', content: icoporProduct }]);
                 if (pvcProduct) setChatMessages(prev => [...prev, { sender: 'bot', type: 'product', content: pvcProduct }]);
+            } else if (userQuery === 'show-all-products' || userQuery.includes('catálogo') || userQuery.includes('todos los productos')) {
+                botResponse = { sender: 'bot', type: 'text', content: '¡Claro que sí! Aquí tienes un recorrido por todo nuestro catálogo. Haz clic en cualquiera para ver más detalles.' };
+                setChatMessages(prev => [...prev, botResponse]);
+                speakText(botResponse.content as string);
+                
+                products.forEach((product, index) => {
+                    setTimeout(() => {
+                        setChatMessages(prev => [...prev, { sender: 'bot', type: 'product', content: product }]);
+                    }, (index + 1) * 1200); // Stagger the messages
+                });
             } else if (userQuery === 'quote' || userQuery.includes('cotizar')) {
                 botResponse = { sender: 'bot', type: 'text', content: "Para cotizar, simplemente navega por nuestra tienda, añade los productos que te interesan al carrito y completa tus datos. Tu solicitud nos llegará directamente por WhatsApp." };
                 setChatMessages(prev => [...prev, botResponse]);
@@ -441,6 +458,64 @@ const App: React.FC = () => {
     const filteredProducts = useMemo(() => { return products.filter(p => filter === 'todos' || p.category === filter).filter(p => p.name.toLowerCase().includes(searchTerm.toLowerCase())); }, [filter, searchTerm]);
 
     if (isSplashVisible) { return ( <div className="splash-screen"> <img src={LOGO_URL_THUMB} alt="Mundoicopor Logo" className="splash-logo h-48 w-48 rounded-full" /> </div> ); }
+    
+    const HeaderVideoModal: React.FC<{ isOpen: boolean; onClose: () => void; }> = ({ isOpen, onClose }) => {
+        if (!isOpen) return null;
+        return (
+            <div className="cart-modal-overlay open" onClick={onClose}>
+                <div className="cart-modal open w-11/12 max-w-4xl" onClick={(e) => e.stopPropagation()}>
+                    <div className="glassmorphic p-1 relative">
+                        <div className="aspect-video">
+                            <iframe
+                                src={`https://www.youtube.com/embed/2JMNIE9LdqE?autoplay=1&rel=0`}
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                                title="Video Principal Mundo Icopor"
+                                className="w-full h-full rounded-lg"
+                            ></iframe>
+                        </div>
+                        <button onClick={onClose} className="absolute -top-3 -right-3 text-white bg-black/50 rounded-full h-8 w-8 flex items-center justify-center hover:bg-black/70 transition-colors z-10">
+                            <CloseIcon />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        );
+    };
+
+    const VideoShowcase: React.FC = () => {
+        const [currentVideo, setCurrentVideo] = useState(showcaseVideos[0]);
+        return (
+            <section id="videos" className="py-12 sm:py-20">
+                <div className="container mx-auto px-4 sm:px-6">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-2">Nuestros Proyectos en Video</h2>
+                    <p className="text-center text-gray-600 mb-8 sm:mb-12">Mira la calidad y el detalle de nuestro trabajo en acción.</p>
+                    <div className="neumorphic-card max-w-4xl mx-auto p-3 sm:p-4">
+                        <div className="aspect-video mb-4 rounded-lg overflow-hidden shadow-inner">
+                             <iframe
+                                key={currentVideo.id} // Important for re-mounting the iframe
+                                src={`https://www.youtube.com/embed/${currentVideo.id}?autoplay=1&rel=0&mute=1`}
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                                title={currentVideo.title}
+                                className="w-full h-full"
+                            ></iframe>
+                        </div>
+                        <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
+                            {showcaseVideos.map(video => (
+                                <button key={video.id} onClick={() => setCurrentVideo(video)} className={`neumorphic-card-inset p-1.5 rounded-lg transition-all duration-300 ${currentVideo.id === video.id ? 'ring-2 ring-blue-500' : 'opacity-70 hover:opacity-100'}`}>
+                                    <img src={video.thumbnail} alt={video.title} className="w-28 sm:w-40 h-auto rounded-md object-cover" />
+                                    <p className="text-xs sm:text-sm font-semibold mt-1 truncate w-28 sm:w-40">{video.title}</p>
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        );
+    };
 
   return (
     <div className="text-gray-700 font-sans">
@@ -453,6 +528,10 @@ const App: React.FC = () => {
             ))}
           </nav>
           <div className='flex items-center gap-2'>
+            <button onClick={() => setIsHeaderVideoOpen(true)} className="hidden sm:flex items-center neumorphic-button text-sm font-semibold py-2 px-4 rounded-full">
+              <PlayIcon />
+              <span>Ver Video</span>
+            </button>
             <button onClick={() => setIsCartOpen(true)} className={`neumorphic-button relative p-2 sm:p-3 rounded-full ${isCartAnimating ? 'cart-bounce' : ''}`}> <CartIcon /> {cart.length > 0 && <span className="absolute -top-1 -right-1 h-5 w-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">{cart.length}</span>} </button>
             <button onClick={() => setIsMenuOpen(true)} className="lg:hidden neumorphic-button p-2 sm:p-3 rounded-full">
                 <MenuIcon />
@@ -608,6 +687,8 @@ const App: React.FC = () => {
         </div>
       </section>
 
+      <VideoShowcase />
+
       <footer id="contacto" className="py-8 sm:py-10">
         <div className="container mx-auto px-4 sm:px-6">
             <div className="neumorphic-card overflow-hidden p-2 sm:p-4">
@@ -639,7 +720,7 @@ const App: React.FC = () => {
         </div>
       </footer>
       
-       <div className={`cart-modal-overlay ${isCartOpen || isPolicyModalOpen || selectedProductForModal || icoporModalIndex !== null ? 'open' : ''}`} onClick={() => { setIsCartOpen(false); setIsPolicyModalOpen(false); setSelectedProductForModal(null); setIcoporModalIndex(null); }}></div>
+       <div className={`cart-modal-overlay ${isCartOpen || isPolicyModalOpen || selectedProductForModal || icoporModalIndex !== null || isHeaderVideoOpen ? 'open' : ''}`} onClick={() => { setIsCartOpen(false); setIsPolicyModalOpen(false); setSelectedProductForModal(null); setIcoporModalIndex(null); setIsHeaderVideoOpen(false); }}></div>
        <div className={`cart-modal w-11/12 max-w-4xl max-h-[90vh] ${isCartOpen ? 'open' : ''}`}>
         <div className="glassmorphic p-4 sm:p-6 md:p-8 overflow-y-auto max-h-[90vh] text-gray-800">
             <div className="flex justify-between items-center mb-6"> <h2 className="text-2xl sm:text-3xl font-bold">Solicitar Cotización</h2> <button onClick={() => setIsCartOpen(false)} className="text-2xl">&times;</button> </div>
@@ -722,6 +803,7 @@ const App: React.FC = () => {
     <RecentActivityNotification />
 
     {selectedProductForModal && ( <ProductDetailModal product={selectedProductForModal} onClose={() => setSelectedProductForModal(null)} onAddToCart={addToCart} /> )}
+    <HeaderVideoModal isOpen={isHeaderVideoOpen} onClose={() => setIsHeaderVideoOpen(false)} />
     </div>
   );
 };
