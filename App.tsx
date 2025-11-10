@@ -488,10 +488,10 @@ const App: React.FC = () => {
     const VideoShowcase: React.FC = () => {
         const [currentVideo, setCurrentVideo] = useState(showcaseVideos[0]);
         return (
-            <section id="videos" className="py-12 sm:py-20">
+            <section id="videos" className="py-10 sm:py-16">
                 <div className="container mx-auto px-4 sm:px-6">
                     <h2 className="text-2xl sm:text-3xl font-bold text-center text-gray-800 mb-2">Nuestros Proyectos en Video</h2>
-                    <p className="text-center text-gray-600 mb-8 sm:mb-12">Mira la calidad y el detalle de nuestro trabajo en acción.</p>
+                    <p className="text-center text-gray-600 mb-6 sm:mb-10">Mira la calidad y el detalle de nuestro trabajo en acción.</p>
                     <div className="neumorphic-card max-w-4xl mx-auto p-3 sm:p-4">
                         <div className="aspect-video mb-4 rounded-lg overflow-hidden shadow-inner">
                              <iframe
@@ -696,9 +696,7 @@ const App: React.FC = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.68303977543!2d-75.6778816239567!3d4.831916940348579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e388160e10d2937%3A0x34db6048cc952fbc!2sCielo%20rasos%20Mundo%20Icopor!5e0!3m2!1ses!2sco!4v1722378931169!5m2!1ses!2sco"
-                        width="100%"
-                        height="350"
-                        style={{ border: 0, borderRadius: '12px' }}
+                        className="w-full h-[250px] sm:h-[350px] border-0 rounded-lg"
                         allowFullScreen
                         loading="lazy"
                         referrerPolicy="no-referrer-when-downgrade"
