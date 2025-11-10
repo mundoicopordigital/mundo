@@ -275,7 +275,7 @@
         opacity: 0.3;
       }
 
-      /* Estilos para Galería Infinita */
+      /* Estilos para Galería Interactiva */
       .infinite-scroll-wrapper {
         -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
         mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
@@ -283,11 +283,33 @@
       .infinite-scroll-container {
         display: flex;
         width: fit-content;
-        animation: scroll-left 60s linear infinite;
       }
-      .infinite-scroll-wrapper:hover .infinite-scroll-container {
-        animation-play-state: paused;
+      
+      /* Comportamiento de scroll: animación para desktop, táctil para móvil */
+      @media (hover: hover) and (pointer: fine) {
+        /* Desktop: Animación infinita */
+        .infinite-scroll-container {
+          animation: scroll-left 60s linear infinite;
+        }
+        .infinite-scroll-wrapper:hover .infinite-scroll-container {
+          animation-play-state: paused;
+        }
       }
+      
+      @media (hover: none) or (pointer: coarse) {
+        /* Mobile/Touch: Scroll nativo */
+        .infinite-scroll-wrapper {
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch; /* Para un scroll más suave en iOS */
+          /* Ocultar scrollbar */
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+        }
+        .infinite-scroll-wrapper::-webkit-scrollbar {
+          display: none; /* Chrome, Safari, Opera */
+        }
+      }
+
       .icopor-design-item {
         transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
         cursor: pointer;

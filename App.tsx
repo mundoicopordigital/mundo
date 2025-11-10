@@ -37,7 +37,7 @@ const InstagramIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className=
 const WhatsAppIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"> <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.3-1.38c1.44.82 3.08 1.25 4.69 1.25h.01c5.46 0 9.91-4.45 9.91-9.91s-4.45-9.91-9.91-9.91zM17.15 15.28c-.22-.11-.76-.38-1.04-.49-.28-.11-.48-.11-.68.11-.2.22-.39.49-.48.59-.09.1-.18.11-.33.06s-.6-.22-1.14-.7c-.43-.37-.71-.84-.8-1-.09-.16 0-.25.09-.34.08-.08.18-.22.27-.33.09-.11.12-.18.18-.3.06-.11 0-.22-.05-.33-.06-.11-.68-1.63-.93-2.23s-.49-.52-.68-.52h-.48c-.2 0-.48.06-.68.33s-.76.74-.76 1.8c0 1.06.78 2.08.88 2.23.11.16 1.54 2.45 3.74 3.3.52.2.92.33 1.24.42.5.13.95.11 1.3.07.39-.04.76-.16.98-.38.28-.27.28-.52.2-.59-.09-.06-.22-.11-.48-.22z"/> </svg> );
 const ChevronLeftIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg> );
 const ChevronRightIcon = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg> );
-const ChevronDownIcon: React.FC<{ className?: string }> = ({ className }) => ( <svg xmlns="http://www.w3.org/2000/svg" className={`h-6 w-6 transition-transform duration-300 ${className || ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg> );
+const ChevronDownIcon: React.FC<{ className?: string }> = ({ className }) => ( <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 transition-transform duration-300 ${className || ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg> );
 const StarIcon: React.FC<{ filled: boolean }> = ({ filled }) => ( <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5 ${filled ? 'text-yellow-400' : 'text-gray-300'}`} viewBox="0 0 20 20" fill="currentColor"> <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /> </svg> );
 const MicIcon: React.FC<{ className?: string }> = ({ className }) => ( <svg xmlns="http://www.w3.org/2000/svg" className={`h-6 w-6 ${className}`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg> );
 const SendIcon: React.FC = () => ( <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" /></svg> );
@@ -103,7 +103,7 @@ const AccordionItem: React.FC<{ item: FAQItem, isOpen: boolean, onClick: () => v
     <div className="neumorphic-card-inset rounded-lg overflow-hidden">
         <button onClick={onClick} className="w-full flex justify-between items-center p-4 text-left font-semibold text-sm sm:text-base">
             <span>{item.question}</span>
-            <ChevronDownIcon className={`${isOpen ? 'rotate-180' : ''}`} />
+            <ChevronDownIcon className={`h-6 w-6 ${isOpen ? 'rotate-180' : ''}`} />
         </button>
         <div className={`transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96' : 'max-h-0'}`}>
             <div className="p-4 pt-0 text-gray-600 text-sm sm:text-base"> <p>{item.answer}</p> </div>
@@ -454,11 +454,17 @@ const App: React.FC = () => {
       <section id="tienda" className="py-12 sm:py-20">
         <div className="container mx-auto px-4 sm:px-6">
             <div className="flex flex-col sm:flex-row justify-between sm:items-center mb-8 sm:mb-12 gap-4">
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 text-center sm:text-left">Nuestros Productos y Servicios</h2>
-                <div className="flex-1 flex items-center justify-center sm:justify-end gap-2 flex-col sm:flex-row max-w-2xl mx-auto sm:mx-0">
-                    <input type="search" placeholder="Buscar producto..." onChange={(e) => setSearchTerm(e.target.value)} className="neumorphic-card-inset w-full sm:w-auto max-w-xs px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm"/>
-                    <select onChange={(e) => setFilter(e.target.value)} className="neumorphic-card-inset w-full sm:w-auto px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm"> <option value="todos">Todas</option> <option value="cielorrasos">Cielorrasos</option> <option value="aluminio">Aluminio</option> <option value="vidrio">Vidrio</option> <option value="remodelacion">Remodelación</option> </select>
-                    <div className="neumorphic-card flex p-1 rounded-full"> <button onClick={() => setViewMode('grid')} className={`p-2 rounded-full ${viewMode === 'grid' ? 'neumorphic-button active' : ''}`}><GridViewIcon /></button> <button onClick={() => setViewMode('list')} className={`p-2 rounded-full ${viewMode === 'list' ? 'neumorphic-button active' : ''}`}><ListViewIcon /></button> </div>
+                <h2 className="text-xl sm:text-3xl font-bold text-gray-800 text-center sm:text-left">Nuestros Productos y Servicios</h2>
+                <div className="flex-1 flex items-center justify-center sm:justify-end gap-2 flex-row flex-wrap">
+                    <input type="search" placeholder="Buscar producto..." onChange={(e) => setSearchTerm(e.target.value)} className="glassmorphic flex-grow sm:flex-grow-0 sm:w-48 px-4 py-2 text-sm bg-transparent placeholder:text-gray-700/70 focus:outline-none"/>
+                    <div className="relative glassmorphic">
+                        <select onChange={(e) => setFilter(e.target.value)} className="w-full pl-4 pr-10 py-2 text-sm bg-transparent appearance-none focus:outline-none"> <option value="todos">Todas</option> <option value="cielorrasos">Cielorrasos</option> <option value="aluminio">Aluminio</option> <option value="vidrio">Vidrio</option> <option value="remodelacion">Remodelación</option> </select>
+                        <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"><ChevronDownIcon /></div>
+                    </div>
+                    <div className="glassmorphic flex p-1 rounded-full"> 
+                      <button onClick={() => setViewMode('grid')} className={`p-2 rounded-full transition-colors ${viewMode === 'grid' ? 'bg-white/40' : 'hover:bg-white/20'}`}><GridViewIcon /></button> 
+                      <button onClick={() => setViewMode('list')} className={`p-2 rounded-full transition-colors ${viewMode === 'list' ? 'bg-white/40' : 'hover:bg-white/20'}`}><ListViewIcon /></button> 
+                    </div>
                 </div>
             </div>
           <div className={viewMode === 'grid' ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" : "flex flex-col gap-6 sm:gap-8"}>
